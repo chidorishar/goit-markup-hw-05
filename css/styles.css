@@ -71,6 +71,24 @@ img {
 
 /* GLOBAL */
 
+.nav-active-page {
+  position: relative;
+
+  color: var(--accent-light-color);
+}
+
+.nav-active-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--accent-light-color);
+}
+
 .button {
   font-family: inherit;
   font-weight: var(--font-medium);
