@@ -23,6 +23,9 @@
   --hero-background-color: #c4c4c4;
   --icons-logo-main-color: #afb1b8;
   --icons-logo-secondary-color: #fff;
+
+  --transition-time: 250ms;
+  --transition-time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* GLOBAL INHERITANCE */
@@ -85,6 +88,11 @@ img {
   background-color: var(--background-light-color);
   border-width: 0px;
   color: var(--primary-dark-color);
+
+  transition: background-color var(--transition-time)
+      var(--transition-time-function),
+    box-shadow var(--transition-time) var(--transition-time-function),
+    color var(--transition-time) var(--transition-time-function);
 }
 
 .active-filter,
@@ -104,8 +112,8 @@ img {
   padding: 0 15px;
 }
 
-.link-clean:hover {
-  cursor: pointer;
+.hidden {
+  display: none;
 }
 
 .list-advantages .icon-wrapper,
@@ -126,13 +134,17 @@ img {
   justify-content: center;
 }
 
+.link-clean:hover {
+  cursor: pointer;
+}
+
+.link-interactive {
+  transition: color var(--transition-time) var(--transition-time-function);
+}
+
 .link-interactive:hover,
 .link-interactive:focus {
   color: var(--accent-light-color);
-}
-
-.hidden {
-  display: none;
 }
 
 .logo {
@@ -162,6 +174,11 @@ img {
   margin-right: 10px;
 }
 
+.list-socials .link-clean {
+  transition: background-color var(--transition-time)
+    var(--transition-time-function);
+}
+
 .list-socials .link-clean:hover,
 .list-socials .link-clean:focus {
   background-color: var(--accent-light-color);
@@ -169,6 +186,8 @@ img {
 
 .list-socials .icon {
   fill: currentColor;
+
+  transition: color var(--transition-time) var(--transition-time-function);
 }
 
 .nav-active-page {
@@ -352,11 +371,14 @@ img {
   background-color: var(--accent-light-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--primary-light-color);
+
+  transition: background-color var(--transition-time)
+    var(--transition-time-function);
 }
 
 .section-hero .button:hover,
 .section-hero .button:focus {
-  background: var(--hero-button-hover-color);
+  background-color: var(--hero-button-hover-color);
 }
 
 /* advantages section */
@@ -485,6 +507,9 @@ img {
   border: 1px solid var(--icons-logo-main-color);
   border-radius: 4px;
   color: var(--icons-logo-main-color);
+
+  transition: color var(--transition-time) var(--transition-time-function),
+    border-color var(--transition-time) var(--transition-time-function);
 }
 
 .list-clients .link-clean:hover,
@@ -529,6 +554,8 @@ img {
 
 .list-portfolio .card-link {
   display: block;
+
+  transition: box-shadow var(--transition-time) var(--transition-time-function);
 }
 
 .list-portfolio .card-link:hover,
