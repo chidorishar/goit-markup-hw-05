@@ -22,6 +22,8 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- JS -->
+    <script src="./js/script.js" defer></script>
   </head>
 
   <body>
@@ -74,7 +76,7 @@
       <section class="section-hero section flex-h-centred">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button">Заказать услугу</button>
+          <button id="hero-button" class="button" type="button">Заказать услугу</button>
         </div>
       </section>
 
@@ -603,5 +605,26 @@
         </div>
       </div>
     </footer>
+
+    <div id="modal-overlay" class="modal-overlay is-hidden">
+      <div class="form">
+        <button id="modal-button-close" class="button-close" type="button">
+          <svg class="icon" width="11" height="11">
+            <use href="./images/decoration/icons.svg#phone"></use>
+          </svg>
+        </button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas perspiciatis quidem vero
+          suscipit. Deleniti ipsam consequuntur modi tempore minus, ab dolore a quibusdam est nam!
+          Atque corrupti, nesciunt at eaque totam quo incidunt fugit veniam officia quidem officiis
+          doloremque cupiditate. Accusamus ullam dolor rerum id totam quam debitis ad accusantium
+          laudantium? Dolore accusantium facilis magnam perferendis commodi perspiciatis molestiae
+          quae ipsum dolorem similique? Quam non, inventore doloremque accusamus ratione obcaecati
+          nesciunt voluptatibus mollitia earum dolorum laudantium nisi doloribus ab quidem deserunt
+          quis velit id voluptatum cupiditate ullam possimus! Quis fugit voluptatum dolorum!
+          Repudiandae rerum eveniet quis veniam laudantium officia harum.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
