@@ -593,9 +593,8 @@ img {
 .list-portfolio .container-meta {
   padding: 20px 24px;
 
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
+  border: 1px solid #eee;
+  border-top: none;
 }
 
 .list-portfolio .subtitle {
