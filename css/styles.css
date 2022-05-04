@@ -634,12 +634,13 @@ img {
 }
 
 .form {
+  flex-direction: row;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
+  max-width: 528px;
   height: 581px;
-  padding: 46px 15px;
+  padding: 40px;
 
   border-radius: 4px;
 
@@ -670,13 +671,11 @@ img {
   background-color: inherit;
   color: var(--accent-dark-color);
 
-  transition: color var(--transition-time) var(--transition-time-function),
-    border-color var(--transition-time) var(--transition-time-function);
+  transition: color var(--transition-time) var(--transition-time-function);
 }
 
 .modal-overlay .button-close:hover,
 .modal-overlay .button-close:focus {
-  border-color: var(--accent-light-color);
   color: var(--accent-light-color);
 }
 
