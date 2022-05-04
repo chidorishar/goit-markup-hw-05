@@ -633,7 +633,7 @@ img {
   pointer-events: none;
 }
 
-.form {
+.window {
   flex-direction: row;
   position: absolute;
   top: 50%;
@@ -652,7 +652,7 @@ img {
   transition: transform var(--transition-time) var(--transition-time-function);
 }
 
-.modal-overlay.is-hidden .form {
+.modal-overlay.is-hidden .window {
   transform: translate(-50%, -50%) scale(0.1, 0.1);
 
   pointer-events: none;
