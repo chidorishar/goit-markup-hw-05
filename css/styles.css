@@ -231,6 +231,22 @@ img {
   color: var(--primary-light-color);
 }
 
+.visually-hidden {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* HEADER */
 
 .header {
@@ -375,6 +391,76 @@ img {
 .section-hero .button:hover,
 .section-hero .button:focus {
   background-color: var(--hero-button-hover-color);
+}
+
+/*  MODAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #00000033;
+  opacity: 1;
+
+  transition: opacity var(--transition-time) var(--transition-time-function);
+}
+
+.modal-overlay.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.window {
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  border-radius: 4px;
+
+  background-color: var(--primary-light-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1, 1);
+  transition: transform var(--transition-time) var(--transition-time-function);
+}
+
+.modal-overlay.is-hidden .window {
+  transform: translate(-50%, -50%) scale(0.1, 0.1);
+
+  pointer-events: none;
+}
+
+.modal-overlay .button-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+
+  background-color: inherit;
+  color: var(--accent-dark-color);
+
+  transition: color var(--transition-time) var(--transition-time-function);
+}
+
+.modal-overlay .button-close:hover,
+.modal-overlay .button-close:focus {
+  color: var(--accent-light-color);
+}
+
+.modal-overlay .button-close > .icon {
+  fill: currentColor;
 }
 
 /* advantages section */
@@ -611,74 +697,4 @@ img {
 .description-type {
   font-size: 16px;
   line-height: 1.875;
-}
-
-/*  MODAL */
-
-.modal-overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-
-  background-color: #00000033;
-  opacity: 1;
-
-  transition: opacity var(--transition-time) var(--transition-time-function);
-}
-
-.modal-overlay.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.window {
-  flex-direction: row;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 528px;
-  height: 581px;
-  padding: 40px;
-
-  border-radius: 4px;
-
-  background-color: var(--primary-light-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-
-  transform: translate(-50%, -50%) scale(1, 1);
-  transition: transform var(--transition-time) var(--transition-time-function);
-}
-
-.modal-overlay.is-hidden .window {
-  transform: translate(-50%, -50%) scale(0.1, 0.1);
-
-  pointer-events: none;
-}
-
-.modal-overlay .button-close {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid #0000001a;
-  border-radius: 50%;
-
-  background-color: inherit;
-  color: var(--accent-dark-color);
-
-  transition: color var(--transition-time) var(--transition-time-function);
-}
-
-.modal-overlay .button-close:hover,
-.modal-overlay .button-close:focus {
-  color: var(--accent-light-color);
-}
-
-.modal-overlay .button-close > .icon {
-  fill: currentColor;
 }
